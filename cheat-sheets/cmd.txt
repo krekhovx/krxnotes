@@ -284,6 +284,7 @@ $ grep -o user /etc/passwd                 # выводит не все стро
 $ grep -rl 'pattern'                       # показывает файлы в которых нашелся паттерн
 $ grep -B1 '1 fuzzy tranlsation.$' <file>  # grep паттерн + вывести строку выше
 $ grep -r --exclude-dir="debian" "yes"     # grep рекурсивно, исключая папку debian
+$ grep -q 'quiet' /etc/default/grub        # grep без вывода на экран
 
 find:
 $ find . -name "file"                              # найти по имени file
