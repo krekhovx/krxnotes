@@ -25,21 +25,21 @@
 --- Основные рекомендации для сборки addon пакетов (vim)
 https://vim-team.pages.debian.net/vim/index.html
 
-В `debian/control` используйте:
+В `debian/control` нужно использовать:
 Architecture: all
 
-Разместите все файлы вашего дополнения (обычно .vim и .txt) в каталоге
-`/usr/share/vim-ADDON/`. Структура файлов и каталогов должна быть такой, какой
-вы ожидаете её в каталоге runtime Vim. Например, если документация дополнения
-указывает, что файл должен быть установлен как `plugin/foo.vim`, то разместите
-его как `/usr/share/vim-ADDON/plugin/foo.vim`.
+Разместить файлы дополнения (.vim, .txt) в каталоге `/usr/share/vim-ADDON/` с
+той же структурой, что и в runtime Vim. Пример: если документация требует
+`plugin/foo.vim`, файл должен находиться по пути
+`/usr/share/vim-ADDON/plugin/foo.vim`.
 
-Создайте `debian/vim-ADDON.vim-addon`, указывающий файлы и/или каталоги,
-составляющие дополнение. Если поддерживается также neovim, создайте
-соответствующий `debian/vim-ADDON.neovim-addon` или используйте символическую
-ссылку, если набор файлов тот же.
+Создать файл `debian/vim-ADDON.vim-addon` с перечнем файлов и/или каталогов,
+входящих в дополнение. Если поддерживается Neovim, создать
+`debian/vim-ADDON.neovim-addon` или сделать на него символьную ссылку при
+идентичном наборе файлов.
 
-Добавьте `Depends: ${vim-addon:Depends}` в секции бинарного пакета.
+В секции бинарного пакета `debian/control` добавить
+`Depends: ${vim-addon:Depends}`.
 
 Если что-то непонятно, можно посмотреть пример в готовых пакетах, например:
 $ apt-get source vim-airline
@@ -76,6 +76,9 @@ $ apt-get source vim-airline
 чтобы этот плагин правильно интегрировался в систему, используя инфраструктуру
 Debian, можно использовать `dh-sequence-vim-addon`.
 
+* vim-addon-manager — инструмент для пользователей/админов (активация/деактивация плагинов).
+* dh-sequence-vim-addon — современный способ подключить dh-vim-addon (заменяет --with vim-addon).
+
 
 --- Заменить vim-addon-manager на более современный
 Можно добавить файлы:
@@ -83,8 +86,8 @@ debian/vim-vimwiki.neovim-addon
 debian/vim-vimwiki.vim-addon
 
 В пакете появляются файлы:
-/usr/share/vim/vimfiles/pack/dist-bundle/start/vim-vimwiki
-/usr/share/nvim/site/pack/dist-bundle/start/vim-vimwiki
+/usr/share/vim/vimfiles/pack/dist/start/vim-vimwiki
+/usr/share/nvim/site/pack/dist/start/vim-vimwiki
 
 Это заменяет:
 $ vim-addon-manager install vim-vimwiki
@@ -95,9 +98,9 @@ $ vim-addon-manager install vim-vimwiki
 копируются в соответствующие каталоги без необходимости выполнения
 дополнительных команд.
 
-/usr/share/vim/vimfiles/pack/dist-bundle/start/vim-vimwiki:
+/usr/share/vim/vimfiles/pack/dist/start/vim-vimwiki:
 Это стандартное место для установки плагинов Vim, которые должны быть
 автоматически загружены при старте.
 
-/usr/share/nvim/site/pack/dist-bundle/start/vim-vimwiki:
+/usr/share/nvim/site/pack/dist/start/vim-vimwiki:
 Это аналогичное место для Neovim.
