@@ -18,9 +18,9 @@
 │   │   ├── doc-c.txt
 │   │   ├── doc-d.txt
 │   │   ├── games.txt
-│   │   ├── salsa-ci.txt
-│   │   ├── trans
+│   │   ├── l10n
 │   │   │   └── doc.txt
+│   │   ├── salsa-ci.txt
 │   │   ├── vim-addon.txt
 │   │   └── xfce.txt
 │   ├── docker
