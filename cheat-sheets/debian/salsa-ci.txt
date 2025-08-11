@@ -32,7 +32,7 @@ debian/salsa-ci.yml
 debian/salsa-ci.yml
 
 НЕ будет использоваться:
-.gtilab.yml
+.gitlab.yml
 
 
 --- Основные термины
@@ -68,14 +68,15 @@ Integration/Continuous Deployment) в проект.
 
 include:
 
-    Этот раздел указывает, какие внешние файлы конфигурации должны быть включены в пайплайн.
+    Этот раздел указывает, какие внешние файлы конфигурации должны быть включены
+    в пайплайн.
 
 https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/salsa-ci.yml
 https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/pipeline-jobs.yml
 
     Эти URL-адреса указывают на файлы конфигурации, которые находятся в
-    репозитории Salsa CI Team. Эти файлы содержат предопределенные задачи и
-    настройки для сборки и тестирования пакетов Debian.
+    репозитории Salsa CI Team. Эти файлы содержат предопределенные задачи
+    и настройки для сборки и тестирования пакетов Debian.
 
 Эти пайплайны включают в себя:
 
