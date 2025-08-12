@@ -874,6 +874,7 @@ $ apt-get install <pkg>
 --- Где брать готовые бинарные пакеты
 Можно использовать:
 $ apt-get download <pack>
+$ dget -u <pack>
 
 $ apt-get download <pack>/sid
 $ apt-get download <pack>/bookworm

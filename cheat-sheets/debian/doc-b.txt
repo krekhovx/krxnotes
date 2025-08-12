@@ -68,8 +68,8 @@ $ mkdir -p repo/conf
 $ touch repo/conf/distributions
 
 Origin: Debian               # название репозитория
-Suite: unstable              # ветка (codename alias)
-Codename: dick               # кодовое слово (например buster, bullseye)
+Suite: unstable              # ветка
+Codename: test               # кодовое слово (например buster, bullseye)
 Version: 1.0                 # версия
 Architectures: amd64 source  # для amd64 + исходных кодов
 Components: main             # компонент (main, contrib, non-free)
@@ -342,8 +342,8 @@ $ quilt rename -P <old> <new> # переименовать патч
 и будет наш новый патч `debian/` и эти патчи применяются к текущим исходникам, а
 сами исходники не меняются.
 
-$ dpkg-source --commit                          # local changed record
-$ dpkg-source -itags --commit                   # ignore tags changes + commit
+$ dpkg-source --commit        # local changed record
+$ dpkg-source -itags --commit # ignore tags changes + commit
 
 После данной команды нужно выполнить (когда добавили или удалили патч):
 $ quilt refresh
@@ -353,7 +353,8 @@ $ dpkg-source --commit
 $ patch -p1 -R < new.patch
 $ quilt delete new
 
-Если `.pc` больше нет, можно добавить: export QUILT_PATCHES=debian/patches
+Если `.pc` больше нет, можно добавить:
+$ export QUILT_PATCHES=debian/patches
 $ quilt push -a
 
 --
@@ -476,7 +477,8 @@ $ scp -r path/to/dir .
 вопросы конфигурации в базе данных, что позволяет избежать повторного запроса
 той же информации при обновлении или переустановке пакетов.
 
-Например, во время установки данного пакета будут задаваться вопросы (это работает `debconf`):
+Например, во время установки данного пакета будут задаваться вопросы
+(это работает `debconf`):
 $ apt-get install postfix
 
 Повторно запустить конфигурацию пакета, откроется `debconf`:
@@ -647,7 +649,9 @@ $ eatmydata apt-get install <a lot of packages>
 Можно использовать опцию:
 $ apt-get install neofetch --no-install-recommends
 
-А можно создать конфигурационный файл `/etc/apt/apt.conf.d/99_norecommends` и прописать:
+А можно создать конфигурационный файл `/etc/apt/apt.conf.d/99_norecommends`
+и прописать:
+
 APT::Install-Recommends "false";
 APT::AutoRemove::RecommendsImportant "false";
 APT::AutoRemove::SuggestsImportant "false";
@@ -740,13 +744,13 @@ UNRELEASED лучше использовать на момент создани�
 выпуска с UNRELEASED на значение целевого дистрибутива `unstable`
 (или даже на `experimental`).
 
-Если вы измените дистрибутив в changelog с UNRELEASED на `unstable` и загрузите
-пакет в Debian, он будет направлен в репозиторий `unstable`, при условии, что
-все проверки пройдены успешно.
+При изменении значения distribution в `debian/changelog` с UNRELEASED на
+unstable и последующей загрузке пакета в архив Debian, пакет направляется
+в репозиторий unstable при условии успешного прохождения всех проверок.
 
-Важно помнить, что плохо написанные файлы создают плохое представление о вашем
-пакете, вашей работе... и даже самом Debian. Еще отмечу, что лучше не стоит
-использовать "he/she" гендерное значение, а лучше использовать "maintainer".
+Плохо оформленные файлы создают отрицательное впечатление о пакете, проделанной
+работе и самом Debian. Рекомендуется избегать гендерно маркированных местоимений
+(he/she) и использовать термин maintainer.
 
 
 --- Non-maintainer upload
@@ -937,8 +941,8 @@ $ echo $? # 1
 --- dget
 Используется для загрузки исходных пакетов (source packages) из репозиториев.
 Он может загружать файлы `.dsc` и все связанные с ними файлы исходного кода,
-такие как `.orig.tar.gz` и `.debian.tar.xz`. Это полезно, когда вы хотите
-получить исходный код пакета для его изучения, модификации или пересборки.
+такие как `.orig.tar.gz` и `.debian.tar.xz`. Это полезно, когда нужно получить
+исходный код пакета для его изучения, модификации или пересборки.
 
 Скачает все необходимые исходные пакеты:
 $ dget http://deb.debian.org/debian/pool/main/h/hello/hello_2.10-2.dsc
@@ -1007,7 +1011,7 @@ $ reportbug
 Сообщить о баге. Создать тикет в BTS.
 
 $ whodepends <package>
-Какие пакеты зависят от указанного пакета (косвенно).
+Проверка того, какие пакеты сопровождающих зависят от пакета.
 
 $ dd-list <package>
 Какие люди отвечают за данное ПО.
@@ -1139,7 +1143,9 @@ Debian и компилирует их в бинарные пакеты для р
 override_dh_auto_test:
 	:
 
-Тогда тесты будут пропущены.
+Тогда сборочные тесты будут пропущены. Например, `make test` (из build системы,
+директория `tests/`). Тесты из `debian/tests` (autopkgtest/DEP-8) этим не
+затрагиваются.
 
 
 --- Основные вызовы debhelper (dh)
@@ -1198,11 +1204,11 @@ override_dh_auto_test:
 Для неклассически обычно прописывают что-то вроде:
 
 %:
-  dh $@ --buildsystem <name>
+	dh $@ --buildsystem <name>
 
 Для остальных (нестандартных систем сборок) нужно писать
 `override_dh_auto_build`, override нужен только если buildsystem не
-поддерживается или тебе нужно что-то нестандартное.
+поддерживается или нужно что-то нестандартное.
 
 Системы сборок, которые поддерживаются `dh`:
 $ ls /usr/share/perl5/Debian/Debhelper/Buildsystem/
