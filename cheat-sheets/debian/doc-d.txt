@@ -29,6 +29,7 @@
 * Debian installer
 * Open Source: Взаимодействие с Социализмом, Капитализмом и Коммунизмом
 * Чем помочь Debian?
+* Source package
 
 Тысячи людей практически безвозмездно трудятся на благо всего человечества,
 а плодами их труда пользуются все. В этом сила Open Source.
@@ -413,7 +414,7 @@ Debian и доступен для установки пользователям.
 (на выбор - Teams) и там задать вопросы.
 
 Зарегистрироваться на:
-https://mentors.debian.net/accounts/register/
+https://mentors.debian.net/
 https://salsa.debian.org/
 https://nm.debian.org/
 
@@ -560,7 +561,7 @@ Debian Developer (DD):
 процессу адаптации программного продукта (например, приложения, библиотеки или
 операционной системы) для работы на другой платформе или операционной системе.
 
-Например, debian/patches старого пакета адаптировали под новую версию.
+Например, `debian/patches` старого пакета адаптировали под новую версию.
 
 В случае Debian, портирование пакетов означает, что разработчики адаптируют
 существующие программные пакеты для работы на Debian GNU/Linux (или других
@@ -1057,12 +1058,12 @@ Debian Gnu/Linux installer menu (BIOS mode) - это меню, которое п
 в себя все необходимые компоненты и программы для выполнения установки
 операционной системы на диск.
 
-Debian Installer, как часть процесса, обеспечивает распаковку и установку
+Debian installer, как часть процесса, обеспечивает распаковку и установку
 пакетов, настройку системы, создание учетных записей, настройку загрузчика
 (включая GRUB), разметка диска, настройка сети и другие критически важные шаги
 для успешной установки операционной системы.
 
-Debian Installer включается в установочный ISO-образ разработчиками
+Debian installer включается в установочный ISO-образ разработчиками
 и поддерживающими проект сообществом Debian.
 
 
@@ -1114,11 +1115,11 @@ Open Source основывается на принципах прозрачно�
   и в капиталистической системе. Open Source может стимулировать инновации и
   конкуренцию, так как компании могут разрабатывать коммерческие продукты на
   основе открытого кода и предоставлять услуги, связанные с ним. Примеры включают
-  Red Hat и другие компании, которые построили успешный бизнес вокруг open source.
+  Red Hat и другие компании, которые построили успешный бизнес вокруг Open Source.
 
 - Коммунизм: В теории, Open Source может быть ближе к коммунистической идее
   полного отказа от частной собственности, так как код принадлежит всем и
-  каждому. Однако в реальной практике open source-сообщества все еще зависят от
+  каждому. Однако в реальной практике Open Source-сообщества все еще зависят от
   добровольного участия и не имеют четкого механизма распределения ресурсов по
   потребностям, как этого требует коммунизм.
 
@@ -1138,3 +1139,49 @@ $ how-can-i-help -o -s newcomer
 
 Список критичных багов:
 https://bugs.debian.org/release-critical/
+
+
+--- Source package
+В `debian/control` можно заметить:
+
+Source: clipboard
+Section: utils
+Priority: optional
+Maintainer: Kirill Rekhov <krekhov.dev@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+  cmake,
+  openssl,
+  pkgconf,
+  libx11-dev,
+  libssl-dev,
+  liburing-dev,
+  libasound2-dev,
+  libwayland-dev,
+  wayland-protocols
+Homepage: https://github.com/Slackadays/Clipboard/wiki
+Vcs-Git: https://salsa.debian.org/krekhov/Clipboard.git
+Vcs-Browser: https://salsa.debian.org/krekhov/Clipboard
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+
+Package: clipboard
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: ...
+ ...
+
+Package: libcbx11-1
+...
+
+Здесь:
+
+-> Source package = это исходный код + каталог `debian/`
+(метаданные и правила сборки).
+
+Source package (summary):
+- .dsc — описание
+- .orig.tar.gz — исходники upstream
+- .debian.tar.xz — каталог `debian/` (правила/патчи)
+
+-> Package: ... = готовые бинарные пакеты для установки пользователями
+(включая -dev для разработчиков).
