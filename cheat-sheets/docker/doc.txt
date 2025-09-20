@@ -31,7 +31,7 @@ Container (контейнер) в Docker - это запущенный экзе�
 в файловой системе и состоянии, которые не влияют на исходный образ.
 
 $ docker run hello-world              # контейнер выполнится и сразу же завершится
-$ docker run -it --name Java openjdk  # запустить контейнер + указать имя, и войти в него
+$ docker run -it --name Java openjdk  # запуск интерактивного контейнера openjdk (Java)
 $ docker run -it <ID>                 # запустить и войти
 $ docker run --help                   # помощь по команде run
 
