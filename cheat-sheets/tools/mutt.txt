@@ -1,5 +1,3 @@
-https://github.com/krekhovx/dotfiles-debian/blob/master/.neomuttrc
-
 Go to last entry               G
 Go to first entry              gg
 Up                             k
