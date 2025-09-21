@@ -23,7 +23,7 @@ kern  :warn  : [Чт июл 28 12:04:31 2022]  __x64_sys_finit_module+0x1a/0x20
 kern  :warn  : [Чт июл 28 12:04:31 2022]  do_syscall_64+0x37/0x80
 kern  :warn  : [Чт июл 28 12:04:31 2022]  entry_SYSCALL_64_after_hwframe+0x44/0xa9
 kern  :warn  : [Чт июл 28 12:04:31 2022] RIP: 0033:0x7e81e77729e9
-kern  :warn  : [Чт июл 28 12:04:31 2022] Code: 00 c3 66 2e 0f 1f 84 00 00 00 00 00 0f 1f ... 
+kern  :warn  : [Чт июл 28 12:04:31 2022] Code: 00 c3 66 2e 0f 1f 84 00 00 00 00 00 0f 1f ...
 kern  :warn  : [Чт июл 28 12:04:31 2022] RSP: 002b:00007fff84e71128 EFLAGS: 00000246 ORIG_RAX: 0000000000000139
 kern  :warn  : [Чт июл 28 12:04:31 2022] RAX: ffffffffffffffda RBX: 00000000013fe7b0 RCX: 00007e81e77729e9
 kern  :warn  : [Чт июл 28 12:04:31 2022] RDX: 0000000000000000 RSI: 000000000041f090 RDI: 0000000000000003
