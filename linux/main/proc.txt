@@ -297,8 +297,8 @@ Linux гарантирует, что каждый процесс получит 
 целочисленной константой (1-30). Передается только факт возникновения сигнала и
 его номер.
 
-Ядро может игнорировать обработчики таких сигналов как SIGKILL и SIGSTOP. Ибо
-программист, мог бы сделать процесс бессмертным.
+Ядро может игнорировать обработчики таких сигналов как SIGKILL и SIGSTOP.
+Ибо программист, мог бы сделать процесс бессмертным.
 
 
 --- Файловая система /proc
@@ -820,8 +820,8 @@ org.freedesktop.DisplayManager
 org.kde.plasmashell
 
 Включить музыку в VLC:
-$ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 \
-org.mpris.MediaPlayer2.Player.Play
+$ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.vlc \
+/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Play
 
 Send a message to a message bus:
 $ dbus-send
