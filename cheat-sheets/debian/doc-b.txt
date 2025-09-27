@@ -357,6 +357,11 @@ $ quilt delete new
 $ export QUILT_PATCHES=debian/patches
 $ quilt push -a
 
+orig.tar.gz следует брать из последнего релизного тега; исходный архив не
+менять. Если изменения затрагивают upstream‑файлы (вне директории `debian/`),
+нужно создать патч с помощью `dpkg-source --commit` (исключение — native‑пакеты,
+без orig).
+
 --
 
 Немного про `debian/changelog`, `dch` и `.changes`:
