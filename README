@@ -48,6 +48,7 @@
 │       └── xfce.txt
 ├── CONTRIBUTING.md
 ├── contributors.md
+├── craft-notes.txt
 ├── languages
 │   ├── bash
 │   │   ├── doc.txt
@@ -235,4 +236,4 @@
 ├── README
 └── README.md
 
-42 directories, 194 files
+42 directories, 195 files
