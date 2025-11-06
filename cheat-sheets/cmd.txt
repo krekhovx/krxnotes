@@ -36,6 +36,7 @@
 * install
 * ()
 * linkchecker
+* Зашифрованный архив
 
 
 --- man
@@ -960,3 +961,11 @@ subshell позволяет выполнить изолированный кус
 
 $ linkchecker dir/
 $ linkchecker --check-extern dir/
+
+
+--- Зашифрованный архив
+Например, создать зашифрованный архив:
+$ tar -cvzf - dir/ | gpg -c -o archive.tgz.gpg
+
+Расшифровать и распаковать:
+$ gpg -d archive.tgz.gpg | tar -xvzf -
