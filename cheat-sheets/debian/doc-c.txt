@@ -34,6 +34,7 @@
 * live-build
 * Загрузчики в Debian
 * ftp-master
+* Source-only upload
 
 
 --- Команды GPG
@@ -1082,3 +1083,19 @@ CD/USB и установочных образах.
 Главный архивный сервер Debian. Туда загружают пакеты (через dput),
 он - первичный источник для зеркал, управляется командой FTP Masters.
 Остальные зеркала (и ftp-eu) синхронизируются с него.
+
+
+--- Source-only upload
+Например, возникла ситуация:
+Not built on buildd ... a new source-only upload is needed.
+
+В `debian/changelog` нужно сделать запись:
+
+  * Source-only upload
+
+Затем:
+
+$ debsign package_1.0.0-1_source.changes
+$ dput mentors package_1.0.0-1_source.changes
+
+Это исправит проблему.

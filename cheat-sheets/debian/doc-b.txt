@@ -39,6 +39,7 @@
 * pbuilder vs sbuild
 * Отключение dh_auto_test
 * Основные вызовы debhelper (dh)
+* DEB_HOST_MULTIARCH
 
 
 --- Создание локального репозитория
@@ -1220,3 +1221,13 @@ $ ls /usr/share/perl5/Debian/Debhelper/Buildsystem/
 
 Вот как можно посмотреть доступные сборочные системы для `dh`:
 $ apt-cache search . | grep '^dh-'
+
+
+--- DEB_HOST_MULTIARCH
+Не стоит прописывать в файлах `*.install` подобные строки:
+usr/lib/*-linux-gnu/libcbwayland.so.1
+
+Лучше прописать:
+usr/lib/${DEB_HOST_MULTIARCH}/libcbwayland.so.1
+
+Это позволит использовать multiarch-совместимость.
