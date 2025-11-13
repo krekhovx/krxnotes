@@ -203,37 +203,36 @@
 ├── LICENSE
 ├── linux
 │   ├── computer-science.txt
-│   ├── main
-│   │   ├── fhs.txt
-│   │   ├── +-kernel
-│   │   │   ├── calltrace.txt
-│   │   │   ├── doc-a.txt
-│   │   │   ├── doc-b.txt
-│   │   │   └── lkm.txt
-│   │   ├── memory
-│   │   │   ├── mem.txt
-│   │   │   └── pages.png
-│   │   ├── misc.txt
-│   │   ├── proc.txt
-│   │   └── sys.txt
-│   └── network
-│       ├── doc.txt
-│       └── images
-│           ├── 10.png
-│           ├── 11.png
-│           ├── 12.png
-│           ├── 13.png
-│           ├── 1.png
-│           ├── 2.png
-│           ├── 3.png
-│           ├── 4.png
-│           ├── 5.png
-│           ├── 6.png
-│           ├── 7.png
-│           ├── 8.png
-│           └── 9.png
+│   ├── fhs.txt
+│   ├── +-kernel
+│   │   ├── calltrace.txt
+│   │   ├── doc-a.txt
+│   │   ├── doc-b.txt
+│   │   └── lkm.txt
+│   ├── memory
+│   │   ├── mem.txt
+│   │   └── pages.png
+│   ├── misc.txt
+│   ├── network
+│   │   ├── doc.txt
+│   │   └── images
+│   │       ├── 10.png
+│   │       ├── 11.png
+│   │       ├── 12.png
+│   │       ├── 13.png
+│   │       ├── 1.png
+│   │       ├── 2.png
+│   │       ├── 3.png
+│   │       ├── 4.png
+│   │       ├── 5.png
+│   │       ├── 6.png
+│   │       ├── 7.png
+│   │       ├── 8.png
+│   │       └── 9.png
+│   ├── proc.txt
+│   └── sys.txt
 ├── print-all-topics.sh
 ├── README
 └── README.md
 
-42 directories, 195 files
+41 directories, 195 files

@@ -1,3 +1,4 @@
+Пример того, как выглядит Call Trace (dmesg):
 kern  :warn  : [Чт июл 28 12:04:31 2022] sysfs: cannot create duplicate filename '/class/power_supply/AC'
 kern  :warn  : [Чт июл 28 12:04:31 2022] CPU: 0 PID: 2137 Comm: insmod Tainted: G           OE     5.10.0-1057-generic #astra6+ci78
 kern  :warn  : [Чт июл 28 12:04:31 2022] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006

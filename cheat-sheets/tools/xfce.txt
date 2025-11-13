@@ -1,4 +1,7 @@
-ctrl + -                       уменьшить шрифты
-ctrl + shift + '+'             увеличить шрифты
-ctrl + 0                       вернуть в стандарт
-alt + scroll up / scroll down  приблизить (zoom)
+https://github.com/krekhovx/dotfiles-debian/blob/master/.config/xfce4/terminal/terminalrc
+https://github.com/krekhovx/dotfiles-debian/tree/master/.config/xfce4/xfconf/xfce-perchannel-xml
+
+ctrl + -                         уменьшить шрифты
+ctrl + shift + '+'               увеличить шрифты
+ctrl + 0                         вернуть в стандарт
+alt + scroll up / scroll down    приблизить (zoom)
