@@ -1,5 +1,6 @@
 .
 ├── books
+│   ├── Bash и кибербезопасность.pdf
 │   ├── Внутреннее устройство Linux.pdf
 │   ├── Керниган. Язык программирования Си.pdf
 │   ├── Командная строка Linux.pdf
@@ -235,4 +236,4 @@
 ├── README
 └── README.md
 
-41 directories, 195 files
+41 directories, 196 files
