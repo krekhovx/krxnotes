@@ -293,8 +293,8 @@ $ systemctl status kmod
 У модулей есть alias. Например, модуль `qrtr` в выводе `lsmod` имеет такое имя.
 Его alias можно посмотреть в `/lib/modules/*/modules.alias`.
 Например: net-pf-42 -> qrtr
-Это значит, что `modprobe` можно передавать:
-Один и тот же модуль:
+
+Это значит, что `modprobe` можно передавать один и тот же модуль:
 $ modinfo qrtr
 $ modprobe net-pf-42
 (Примечание: `modinfo` ищет только по реальному имени файла модуля, alias понимает `modprobe`)
@@ -304,8 +304,7 @@ $ modprobe net-pf-42
 зависимости. Файл создается командой:
 $ depmod -a
 
-Пример:
-Модуль `qrtr-mhi.ko` запрашивает загрузку `qrtr.ko` и `mhi.ko`:
+Например, модуль `qrtr-mhi.ko` запрашивает загрузку `qrtr.ko` и `mhi.ko`:
 kernel/net/qrtr/qrtr-mhi.ko: kernel/net/qrtr/qrtr.ko kernel/drivers/bus/mhi/host/mhi.ko
 
 Затем `modprobe` вызывает `insmod` (указывая путь из `/lib/modules/*/`), который
@@ -321,7 +320,7 @@ $ insmod /lib/modules/2.6.11/kernel/fs/msdos/msdos.ko
 $ modprobe msdos
 
 Для загрузки модулей, собранных вне дерева ядра, полезно иметь включённый
-CONFIG_MODVERSIONS=y.
+CONFIG_MODVERSIONS=y
 
 Он не обязателен для загрузки модулей в принципе, но позволяет обеспечивать
 совместимость символов между версиями ядра и модулей (versioned symbols),
