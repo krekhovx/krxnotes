@@ -314,7 +314,7 @@ Co-maintenance означает совместное управление или
 
 
 --- Какие роли есть в Debian
-* Debian Maintainer (DM): This is the first step – as DM you can upload your own
+* Debian Maintainer (DM): This is the first step - as DM you can upload your own
 packages to the Debian archive (with some restrictions). Unlike Sponsored
 Maintainers, Debian Maintainers can maintain packages without a sponsor.
 
