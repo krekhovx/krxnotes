@@ -37,6 +37,7 @@
 * ()
 * linkchecker
 * Зашифрованный архив
+* Поиск разных тире через grep
 
 
 --- man
@@ -975,3 +976,7 @@ $ tar -cvzf - dir/ | gpg -c -o archive.tgz.gpg
 
 Расшифровать и распаковать:
 $ gpg -d archive.tgz.gpg | tar -xvzf -
+
+
+--- Поиск разных тире через grep
+$ grep -rE "—|–"
