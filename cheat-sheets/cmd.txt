@@ -302,6 +302,7 @@ $ find . -name "file"                              # найти по имени 
 $ find . -iname "file"                             # не обращать внимание на регистр
 $ find . -type d                                   # искать толко директории
 $ find . -type f                                   # искать только файлы
+$ find . -type -executable                         # искать только исполняемые файлы
 $ find . -maxdepth 1                               # углубленность поиска
 $ find /tmp -user "root"                           # искать файлы по владельцу
 $ find / -name "*.sh"                              # искать файлы с расширением .sh
