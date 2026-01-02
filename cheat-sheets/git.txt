@@ -144,8 +144,9 @@ $ git config user.name # конкретное
 $ git log                                   # все коммиты
 $ git log -2                                # два последних коммита
 $ git log -p -1                             # изменения в последнем коммите
+$ git log -p -6                             # изменения в последних шести коммитах
 $ git log -p -1 <uid>                       # изменения конкретного коммита
-$ git log --name-only                       # вместе с файлами
+$ git log --name-only                       # описания коммитов вместе с файлами
 
 $ git log --oneline
 $ git log --pretty=oneline                  # вывести в одну строку
