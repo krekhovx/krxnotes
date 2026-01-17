@@ -40,7 +40,7 @@
 │       ├── mc.txt
 │       ├── mutt.txt
 │       ├── newsboat.txt
-│       ├── README.md
+│       ├── README
 │       ├── tig.txt
 │       ├── tmux.txt
 │       ├── valgrind.txt
@@ -50,6 +50,10 @@
 ├── CONTRIBUTING.md
 ├── contributors.md
 ├── craft-notes.txt
+├── games
+│   ├── diablo2
+│   │   └── doc.txt
+│   └── README
 ├── languages
 │   ├── bash
 │   │   ├── doc.txt
@@ -236,4 +240,4 @@
 ├── README
 └── README.md
 
-41 directories, 196 files
+43 directories, 198 files
