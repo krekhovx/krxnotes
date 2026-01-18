@@ -240,4 +240,23 @@ Necromancer важнее Vitality и Energy.
 
 --- Горячие клавиши
 
-...
+H Help Screen
+Q Quest Log
+M Message Log
+B Inventory Screen
+A Character Screen
+T Skill Tree
+S Skill Speed Bar
+W Swap Weapons
+R Toggle Run/Walk
+Z Show Portraits
+
+Shift Stand Still
+1-2-3-4 Use Belt
+F1-F12 Skills
+Enter Chat
+Ctrl Run
+Tab Automap
+Alt Show Items
+F10 Fade Automap
+Space Clear Screen
