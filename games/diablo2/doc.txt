@@ -1,7 +1,7 @@
 Темы:
+* Рабочее окружение Diablo II
 * Смысл игры
 * Класс: Summoner Necromancer
-* Рабочее окружение Diablo II
 * Советы
 * Горячие клавиши
 
@@ -10,6 +10,20 @@ Diablo II: Lord of Destruction v1.13d
 Ключи к игре:
 Diablo II: C8ZJ6G-G48C-YDDYRC-NKZJ-WB9RND
 Diablo II LoD: VYFYBP-8TH6-PZ4924-6NRH-NJH9KZ
+
+
+--- Рабочее окружение Diablo II
+
+Патч-обновление до v1.13d
+https://www.moddb.com/games/diablo-2-lod/downloads/patch-1-13d
+
+Эти инструменты работают только в v1.13d:
+https://github.com/bolrog/d2dx
+https://github.com/bayaraa/d2gl
+https://github.com/ChaosMarc/PlugY
+
+Для версии v1.14 не работает Glide, D2DX, D2GL, PlugY и большинство старых модов
+- из‑за изменённого игрового движка и другой системы работы с файлами.
 
 
 --- Смысл игры
@@ -108,8 +122,8 @@ Diablo II LoD: VYFYBP-8TH6-PZ4924-6NRH-NJH9KZ
 Summon Golem (желательно Iron Golem), Corpse Explosion, Amplify Damage
 (или Decrepify, если найдёшь).
 
-Статы: Вкладывай очки в Energy только до 50-75 (хватит для постоянного призыва),
-остальное - в Vitality (жизнь).
+Статы: Strength - по требованиям экипировки, Vitality - всё остальное,
+Dexterity и Energy - 0.
 
 2. Навыки и прокачка
 
@@ -172,20 +186,6 @@ Nightmare/Hell: Фармите Ancient Tunnels, Pindleskin, Mephisto или Baal
 Танк: Iron Golem с Golem Mastery.
 Максимальный урон: Corpse Explosion + Amplify Damage.
 Поддержка: Skeleton Mage (огненные/ледяные) для дополнительного урона.
-
-
---- Рабочее окружение Diablo II
-
-Патч-обновление до v1.13d
-https://www.moddb.com/games/diablo-2-lod/downloads/patch-1-13d
-
-Эти инструменты работают только в v1.13d:
-https://github.com/bolrog/d2dx
-https://github.com/bayaraa/d2gl
-https://github.com/ChaosMarc/PlugY
-
-Для версии v1.14 не работает Glide, D2DX, D2GL, PlugY и большинство старых модов
-- из‑за изменённого игрового движка и другой системы работы с файлами.
 
 
 --- Советы
