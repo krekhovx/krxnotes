@@ -1,3 +1,6 @@
+https://github.com/krekhovx/dotfiles-debian/blob/master/.neomuttrc
+https://github.com/krekhovx/dotfiles-debian/blob/master/.signature
+
 Go to last entry               G
 Go to first entry              gg
 Up                             k

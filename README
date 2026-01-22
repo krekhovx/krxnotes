@@ -40,7 +40,6 @@
 │       ├── mc.txt
 │       ├── mutt.txt
 │       ├── newsboat.txt
-│       ├── README
 │       ├── tig.txt
 │       ├── tmux.txt
 │       ├── valgrind.txt
@@ -240,4 +239,4 @@
 ├── README
 └── README.md
 
-43 directories, 198 files
+43 directories, 197 files
