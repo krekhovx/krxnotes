@@ -13,6 +13,7 @@ Q - close all
 e - vim edit
 g - grep
 D - сокращает дату
+d - просмотр коммита в полный экран
 
 Scrolling:
 ctrl-d
