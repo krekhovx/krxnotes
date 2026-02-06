@@ -324,6 +324,7 @@ $ find . -name "*.png" -o -name "*.jpg"            # показать все 'pn
 $ find . -name "*.orig" -not -path "./.pc/*"       # искать *.orig, но игнорировать .pc/*
 $ find . -name "*.i686.rpm" -exec mv {} ../ww/ \;  # переместить все *.i686.rpm файлы в ../w
 $ find . -wholename "*/debian/control"             # искать по полному пути
+$ find . -path ./.git -prune -o -print             # игнорировать .git директорию
 
 Можно искать не только `f`/`d`, но и `l` `b` `c` `s` `p`
 ссылки, блочные устройства, символьные устройства, каналы, сокеты.
