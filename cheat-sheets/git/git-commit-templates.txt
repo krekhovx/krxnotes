@@ -118,6 +118,8 @@ upload to unstable
 
 sync with upstream
 
+refs: <links here>
+
 adjust build flags
 (подправить параметры сборки (CFLAGS, LDFLAGS и т.п))
 
@@ -157,6 +159,9 @@ drop unused dependencies
 
 bump version to <version>
 
+prevent racing of requests
+(предотвратить гонку запросов)
+
 update years in d/copyright
 
 minor adjustments and fixes
@@ -176,5 +181,7 @@ restrict GPL-3 license to version 3
 
 d/copyright: update to DEP-5 format
 (если что, DEP-5 используется только в d/copyright)
+
+feat(parser): add ability to parse arrays
 
 disable module due to systemd dependencies
