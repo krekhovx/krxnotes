@@ -29,7 +29,9 @@
 │   │   └── example
 │   │       ├── Dockerfile
 │   │       └── file.c
-│   ├── git.txt
+│   ├── git
+│   │   ├── git-commit-templates.txt
+│   │   └── git.txt
 │   ├── make.txt
 │   ├── net.txt
 │   ├── regexp.txt
@@ -240,4 +242,4 @@
 ├── README
 └── README.md
 
-43 directories, 198 files
+44 directories, 199 files

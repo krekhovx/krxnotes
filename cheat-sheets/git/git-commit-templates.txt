@@ -1,0 +1,180 @@
+Здесь хранится список часто используемых мной сообщений для git commit на
+английском. Также присутствует описание стандарта оформления commit‑сообщений.
+Общепринятый стандарт можно найти здесь:
+* https://www.conventionalcommits.org/ru/v1.0.0/
+* https://www.conventionalcommits.org/en/v1.0.0/
+
+---
+
+Можно использовать `~/.gitmessage`, который помогает хранить шаблон текста для
+коммитов. Git может автоматически подставлять его в редактор при выполнении
+команды `git commit` (если настроить `commit.template`). Это помогает быстрее
+писать коммиты, придерживаться единого стиля и не забывать важные части
+сообщения. Например:
+https://github.com/krekhovx/dotfiles-debian/blob/master/.gitmessage
+Это шпаргалка по Conventional Commits — правилам оформления сообщений коммитов.
+
+--- Далее следует разбор этой шпаргалки.
+
+Git сообщение делится:
+* Заголовок (header) — кратко, что сделано.
+* Тело (body) — детали, зачем и почему.
+* Подвал (footer) — ссылки на задачи, баг‑трекер, breaking changes (необязательно).
+
+Структура:
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+Пример правильного сообщения:
+```
+fix(config): change load issue
+
+The config loader failed when the user had no local config file.
+Added a fallback to the default configuration and improved error
+handling to avoid unexpected crashes.
+
+Refs: ISSUE-143
+```
+
+Короткое описание Conventional Commits:
+* `<type>` — тип изменения (feat, fix, docs, refactor и т.д.).
+* `<scope>` — область изменений.
+* `!` — есть ломающие изменения.
+* `<description>` — короткое описание в повелительном наклонении.
+* `<body>` — подробности, можно без повелительного.
+* `<footer>` — метаданные: закрытие задач, breaking change, авторы.
+
+* feat — новая функция.
+* fix — исправление бага.
+* build — изменения в сборке или окружении.
+* ci — настройки CI.
+* test — добавление или исправление тестов.
+* docs — только документация.
+* refactor — переработка кода без изменения поведения.
+* perf — улучшение производительности.
+* style — стиль кода, без логики (форматирование, пробелы).
+* chore — прочее, рутинные задачи.
+* revert — отмена предыдущего коммита.
+
+Повелительное наклонение — это форма глагола как команда.
+Примеры:
+* update readme
+* add config loader
+* fix crash on startup
+* remove deprecated code
+
+То есть не "Added", не "Fixes", не "Updating",
+а именно команда: add, fix, update, remove.
+
+Про восклицательный знак (!):
+Если поставить `!` перед двоеточием, значит коммит содержит ломающее изменение
+(breaking change).
+
+Пример:
+```
+feat(api)!: remove deprecated endpoints
+```
+
+То есть этот коммит ломает обратную совместимость.
+
+Про Scope, это область или часть проекта, к которой относится изменение.
+
+Примеры:
+* feat(ui): add button
+* fix(auth): correct token refresh
+* docs(readme): update installation guide
+
+Это просто уточнение, где именно произошло изменение. Не обязательно.
+
+--- Часто используемые фразы на английском и примеры (субъективно)
+
+Debianization <version>
+
+Initial commit
+
+fix typo
+
+add commas
+
+cleanup code
+
+update file.txt
+
+refresh patches
+(перегенерировать патчи, чтобы правильно применялись после изменений в исходниках)
+
+improve file.txt
+
+cosmetic changes
+
+simplify file.txt
+
+upload to unstable
+
+sync with upstream
+
+adjust build flags
+(подправить параметры сборки (CFLAGS, LDFLAGS и т.п))
+
+drop hardcoded +ds2
+
+add missing manpage
+
+update dependencies
+
+update Vcs-* fields
+
+stupid perfectionism
+
+remove trailing line
+(просто удалён лишний пробел/пустая строка в конце)
+
+housekeeping changes
+(рутинная уборка: мелкие правки без изменения логики)
+
+fix lintian warnings
+
+minor fixes to scripts
+
+add fix warnings patch
+
+add some useful fields
+
+remove adopted patches
+
+delete deprecated file
+
+rename file for clarity
+
+implement <name> feature
+
+drop unused dependencies
+
+bump version to <version>
+
+update years in d/copyright
+
+minor adjustments and fixes
+
+remove obsolete configuration
+
+drop patches applied upstream
+
+release <version> to unstable
+
+Standards-Version to <version>
+
+enable hardening and linker flags
+
+restrict GPL-3 license to version 3
+(уточнить лицензию, указав строго GPL‑3 без "or later")
+
+d/copyright: update to DEP-5 format
+(если что, DEP-5 используется только в d/copyright)
+
+disable module due to systemd dependencies

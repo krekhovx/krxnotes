@@ -1,24 +1,24 @@
 Темы:
-* Описание
-* Настройка
-* Коммиты
+* Основы Git
+* Настройка Git
+* Просмотр коммитов
 * Отменить все изменения
-* Убрать все добавленные файлы
+* Отмена добавленных файлов
 * Удаление последнего коммита
 * Удаление последних 3-4 коммитов
 * Удаление коммита с сервера в режиме rebase
-* Увидеть все изменения
+* Просмотр изменений через git diff
 * Инициализация проекта
 * Удалить неотслеживаемые, новые файлы
 * Изменение записи последнего коммита
 * Сокращенная команда добавления
 * Ветки
-* Прибережения
+* Использование git stash
 * Изменение коммита в режиме rebase
 * Тег и релиз
 * Как изменить автора последнего коммита
 * Работа в приватном репозитории
-* Если master отстаёт от origin/master и есть локальные изменения
+* Когда master отстаёт от origin/master и есть локальные изменения
 * git push --force
 * git revert
 * git cherry-pick
@@ -31,19 +31,19 @@
 * Merge Request и Pull Request
 * GitHub vs Bitbucket vs GitLab
 * Github Traffic
-* README, оформление, источники, заметки
+* README и структура проекта
 * git format-patch
 * Аббревиатуры, комментарии пользователей
 * Максимальный размер файла/репозитория на GitHub
 * git-lfs
 * Создание пустых веток
-* origin master и --set-upstream origin master
+* origin и --set-upstream
 * Подписание тегов и коммитов
 * Перезалить готовый репозиторий
 * Добавить пустую папку
 
 
---- Описание
+--- Основы Git
 Система контроля версий (СКВ) - это система, регистрирующая изменения в одном
 или нескольких файлах для того чтобы была возможность вернуться к прежним
 версиям этих файлов. Под версионный контроль можно поместить файлы практически
@@ -110,8 +110,8 @@ $ git mv file fi
 Просмотр urls:
 $ git remote -v
 
-Поменять origin на:
-$ git remote set-url origin git@salsa.debian.org:example/new.git
+Смена URL удалённого репозитория:
+$ git remote set-url origin https://github.com/example/new.git
 
 Проверить соединение:
 $ git ls-remote
@@ -130,7 +130,7 @@ $ git show 1c002dd4b536e7479fe34593e72e6c6c1819e53b
 $ ls -A ~/ | grep .gitconfig
 
 
---- Настройка
+--- Настройка Git
 $ git config --global user.email "example@gmail.com"
 $ git config --global user.name "exampleuser"
 
@@ -140,7 +140,7 @@ $ git config --list    # настройка git
 $ git config user.name # конкретное
 
 
---- Коммиты
+--- Просмотр коммитов
 $ git log                                   # все коммиты
 $ git log -2                                # два последних коммита
 $ git log -p -1                             # изменения в последнем коммите
@@ -170,11 +170,11 @@ $ git status                                # показывает статус
 $ git status -s                             # показывает статус (только файлы)
 
 
---- Отменить все изменения
+--- Отмена изменений
 $ git checkout -- .
 
 
---- Убрать все добавленнные файлы
+--- Отмена добавленных файлов
 Это когда сделали `git add`, и затем хотим сбросить:
 $ git reset -- .
 
@@ -201,7 +201,7 @@ d (drop), затем:
 $ git push -f
 
 
---- Увидеть все изменения
+--- Просмотр изменений через git diff
 Это команда сравнивает индексированные изменения с последним коммитом:
 $ git diff
 
@@ -289,7 +289,7 @@ $ git push origin -u <newname>
 $ git push origin --delete <oldname>
 
 
---- Прибережения
+--- Использование git stash
 `git stash` или `git stash save`
 Сохранит наработки перед переходом в другую ветку.
 Чтобы отменить: `git stash pop`.
@@ -353,7 +353,7 @@ $ git commit --amend --author="John Doe <john@doe.org>"
 содержимое .pub ключа и добавить его через веб-морду.
 
 
---- Если master отстаёт от origin/master и есть локальные изменения
+--- Когда master отстаёт от origin/master и есть локальные изменения
 $ git add . && git commit -m "<new releas>"
 
 $ git pull --rebase
@@ -494,7 +494,7 @@ Bitbucket: Code -> Review -> Build -> Test -> Plan
 Клонеры - это люди, которые клонировали или скачали копию кода с GitHub.
 
 
---- README, оформление, источники, заметки
+--- README и структура проекта
 Отличный шаблон/стандарт:
 https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
@@ -621,7 +621,7 @@ $ git commit --allow-empty -m "Initial empty commit"
 $ git push origin latest
 
 
---- origin master и --set-upstream origin master
+--- origin и --set-upstream
 $ git push origin master
 
 - Отправляет изменения из локальной ветки `master` в удаленный репозиторий
@@ -665,10 +665,10 @@ $ git tag -s <new-tag>
 
 --- Перезалить готовый репозиторий
 Например, понадобилось перелазить готовый GitHub репозиторий со всеми коммитами
-и тегами на новый Salsa адрес:
+и тегами на новый адрес:
 $ git clone https://github.com/example/old.git
 $ cd old
-$ git remote set-url origin https://salsa.debian.org/example/new.git
+$ git remote set-url origin https://github.com/example/new.git
 $ git push --set-upstream origin --all
 $ git push --set-upstream origin --tags
 
