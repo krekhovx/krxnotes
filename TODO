@@ -1,0 +1,8 @@
+Можно в cheat-sheets создать отдельную директорию по системам сборки, перенести
+туда make.txt, немного расписать CMake. Так же можно расписать pyproject‑based
+build system для Python (чуть-чуть описать старые варианты: setup.py, setup.cfg).
+
+C = autotools, cmake
+Python = pyproject‑based build system, setup.py, setup,cfg
+
+Дополнить languages/doc.txt про системы сборки для каждого языка.
