@@ -6,3 +6,6 @@ C = autotools, cmake
 Python = pyproject‑based build system, setup.py, setup,cfg
 
 Дополнить languages/doc.txt про системы сборки для каждого языка.
+
+Многие посты в Telegram-канале никак не описаны здесь. Можно записать сюда самое
+важное, а остальное пропустить.
