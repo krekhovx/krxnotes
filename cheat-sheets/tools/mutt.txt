@@ -27,6 +27,7 @@ Reply                          r
 Forward message                f
 New message                    m
 
+Sign message (PGP/MIME)        p -> s
 View attachments               v
 Compose mode (append)          a
 Compose to Sender              @
