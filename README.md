@@ -3,9 +3,6 @@
     <img src="https://img.shields.io/badge/Knowledge%20Base--RUS-blue?style=flat&label=%D0%91%D0%B0%D0%B7%D0%B0%20%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9&labelColor=008000">
 </a>
 <img src="https://img.shields.io/github/repo-size/krekhovx/krxnotes.svg?label=Repo%20size&style=flat">
-<a href="https://github.com/krekhovx/krxnotes/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/Welcome-black?style=flat&label=Contributions&labelColor=gray">
-</a>
 </div>
 
 # Notes
@@ -76,13 +73,3 @@ books/
 ```
 если какой-то ```txt``` файл пропущен, в нём нет блока с перечислением тем
 (таких файлов немного).
-
-## Участие
-Пожалуйста, ознакомьтесь с
-[CONTRIBUTING.md](https://github.com/krekhovx/krxnotes/blob/master/CONTRIBUTING.md)
-для получения подробностей о норме поведения проекта и процессе отправки
-запросов на включение (Pull Requests).
-
-## Лицензия
-Этот проект лицензирован в соответствии с GPLv3 - подробности смотрите в файле
-[LICENSE](https://github.com/krekhovx/krxnotes/blob/master/LICENSE).

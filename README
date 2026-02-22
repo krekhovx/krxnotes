@@ -48,8 +48,6 @@
 │       ├── vifm.txt
 │       ├── vim.txt
 │       └── xfce.txt
-├── CONTRIBUTING.md
-├── contributors.md
 ├── craft-notes.txt
 ├── games
 │   ├── diablo2
@@ -243,4 +241,4 @@
 ├── README.md
 └── TODO
 
-44 directories, 200 files
+44 directories, 198 files
