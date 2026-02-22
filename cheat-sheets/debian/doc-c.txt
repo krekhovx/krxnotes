@@ -416,10 +416,12 @@ Closing this RFP: this package is already in sid.
 
 Чтобы переписка сохранялась в публичный Debian архив.
 
-Если нужно убрать себя из поля Owned by:
-noowner 1092159
+Если нужно убрать себя из поля Owned by, надо отправить письмо
+control@bugs.debian.org с таким содержимым:
+noowner НОМЕР
 
-и не забыть добавить: СС: control@bugs.debian.org
+Например:
+noowner 1092159
 
 
 --- Шаблон письма при отправке патчей/изменений
