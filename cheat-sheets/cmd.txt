@@ -985,7 +985,7 @@ $ gpg -d archive.tgz.gpg | tar -xvzf -
 
 
 --- Поиск разных тире через grep
-$ grep -rE "—|–"
+$ grep -rE "—|–|‑"
 
 
 --- du
