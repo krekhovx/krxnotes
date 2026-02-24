@@ -956,7 +956,7 @@ SubShell - это отдельная копия Shell, которая запус
 
 $ cd /tmp
 $ (cd /; ls)
-$ pwd # по‑прежнему /tmp
+$ pwd # по-прежнему /tmp
 
 SubShell позволяет временно менять окружение, не затрагивая основной
 shell-сеанс.
@@ -992,9 +992,9 @@ $ grep -rE "—|–|‑"
 Можно передать как файл так и директорию.
 
 Показывает общий размер текущей папки одним числом
-s = summary, h = human‑readable
+s = summary, h = human-readable
 $ du -sh /dir
 
 Выводит размер каждого файла и каждой папки рекурсивно
-a = all, h = human‑readable
+a = all, h = human-readable
 $ du -ah /dir

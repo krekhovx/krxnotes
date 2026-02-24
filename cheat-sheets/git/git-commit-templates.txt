@@ -1,5 +1,5 @@
 Здесь хранится список часто используемых мной сообщений для git commit на
-английском. Также присутствует описание стандарта оформления commit‑сообщений.
+английском. Также присутствует описание стандарта оформления commit-сообщений.
 Общепринятый стандарт можно найти здесь:
 * https://www.conventionalcommits.org/ru/v1.0.0/
 * https://www.conventionalcommits.org/en/v1.0.0/
@@ -19,7 +19,7 @@ https://github.com/krekhovx/dotfiles-debian/blob/master/.gitmessage
 Git сообщение делится:
 * Заголовок (header) - кратко, что сделано.
 * Тело (body) - детали, зачем и почему.
-* Подвал (footer) - ссылки на задачи, баг‑трекер, breaking changes (необязательно).
+* Подвал (footer) - ссылки на задачи, баг-трекер, breaking changes (необязательно).
 
 Структура:
 ```
@@ -177,7 +177,7 @@ Standards-Version to <version>
 enable hardening and linker flags
 
 restrict GPL-3 license to version 3
-(уточнить лицензию, указав строго GPL‑3 без "or later")
+(уточнить лицензию, указав строго GPL-3 без "or later")
 
 d/copyright: update to DEP-5 format
 (если что, DEP-5 используется только в d/copyright)
