@@ -23,5 +23,3 @@ Python = pyproject-based build system, setup.py, setup,cfg
 Почитать про DFSG (Debian Free Software Guidelines), можно посмотреть:
 https://salsa.debian.org/dfsg-team/dfsg-new-queue
 https://dfsg-new-queue.debian.org/
-
-Что за пакет debian-policy в Debian (Standards-Version)

@@ -25,6 +25,7 @@
 * fzf, fzy, ripgrep
 * udeb и dbgsym пакеты
 * lintian и lintian-brush
+* debian-policy (Standards-Version)
 
 
 --- Репозиторий
@@ -1132,3 +1133,34 @@ lintian-brush - это утилита, которая автоматически
 Для чего нужны:
 - Помогают делать Debian-пакеты более качественными и соответствующими правилам.
 - lintian - для проверки, lintian-brush - для автоматического исправления части проблем.
+
+
+--- debian-policy ( Standards-Version )
+Как узнать актуальную версию Standards-Version? Можно выполнить:
+$ apt-cache madison debian-policy
+
+Пример вывода:
+debian-policy |    4.7.2.0 | http://deb.debian.org/debian trixie/main Sources
+debian-policy |    4.7.3.0 | http://deb.debian.org/debian sid/main Sources
+debian-policy |    4.6.2.0 | http://deb.debian.org/debian bookworm/main Sources
+
+или
+
+$ apt-cache show debian-policy
+
+Пример вывода:
+Package: debian-policy
+Version: 4.7.3.0
+
+Пакет debian-policy содержит только документацию (руководства и спецификации).
+Это стандарты для разработчиков пакетов Debian
+
+В нём описано:
+- как правильно собирать пакеты
+- какие файлы куда ставить
+- зависимости
+- именование
+- правила для maintainer-скриптов
+- виртуальные пакеты и т.п.
+
+Обычному пользователю он обычно не нужен.
