@@ -1149,7 +1149,7 @@ https://bugs.debian.org/release-critical/
 Source: clipboard
 Section: utils
 Priority: optional
-Maintainer: Kirill Rekhov <krekhov.dev@gmail.com>
+Maintainer: Ivan Ivanov <example@gmail.com>
 Build-Depends: debhelper-compat (= 13),
   cmake,
   openssl,

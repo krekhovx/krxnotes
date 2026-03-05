@@ -19,7 +19,3 @@ Python = pyproject-based build system, setup.py, setup,cfg
 Можно добавить информацию про debrebuild и reprotest в cheat-sheets/debian
 Смотреть тему: --- Утилиты для тестирования пакетов + посмотреть остальные
 инструменты для тестирования пакетов (они отдельно тоже указаны).
-
-Почитать про DFSG (Debian Free Software Guidelines), можно посмотреть:
-https://salsa.debian.org/dfsg-team/dfsg-new-queue
-https://dfsg-new-queue.debian.org/

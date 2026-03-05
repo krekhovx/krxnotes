@@ -35,6 +35,7 @@
 * Загрузчики в Debian
 * ftp-master
 * Source-only upload
+* DFSG (Debian Free Software Guidelines)
 
 
 --- Команды GPG
@@ -400,7 +401,7 @@ Version: <version>
 Кому: 1092159@bugs.debian.org
 Тема: #1092159
 Control: retitle -1 ITP: libxfce4windowing -- windowing library
-Control: owner -1 Kirill Rekhov <krekhov.dev@gmail.com>
+Control: owner -1 Ivan Ivanov <example@gmail.com>
 
 В системе отслеживания ошибок Debian (BTS) с помощью команд Control можно
 вносить изменения в тикеты. Например, команда `retitle` позволяет изменять
@@ -484,7 +485,7 @@ mentors или через списки рассылки Debian.
 
 
 --- Разбор Debian ссылок
-* https://archive.debian.org/:
+* https://archive.debian.org/
 
 - Этот архив содержит устаревшие версии Debian и пакеты, которые больше не
   поддерживаются официально.
@@ -495,20 +496,19 @@ mentors или через списки рассылки Debian.
 - Полезен, если нужно работать с историческими версиями Debian или восстановить
   старую систему.
 
-* https://ftp.debian.org/debian/:
+* https://ftp.debian.org/debian/
 
 - Адрес http://deb.debian.org/debian из sources.list - это
   https://ftp.debian.org/debian/
 
 - Это основной сервер для официальных и поддерживаемых версий Debian.
 
-- Здесь находятся актуальные версии пакетов и репозитории, на которые вы,
-  вероятно, будете ссылаться для установки или обновления программ на
-  действующих системах Debian.
+- Здесь находятся актуальные версии пакетов и репозитории для установки и
+  обновления программ в Debian.
 
 - Поддерживается и обновляется сообществом Debian.
 
-* https://ftp-master.debian.org/:
+* https://ftp-master.debian.org/
 
 Это сайт, связанный с инфраструктурой Debian, который обслуживает разработчиков
 и администраторов пакетов. Он содержит информацию о текущем состоянии архивов,
@@ -517,7 +517,8 @@ mentors или через списки рассылки Debian.
 а часть внутренней логистики и управления пакетами в проекте Debian.
 
 Например, здесь: https://ftp-master.debian.org/new.html можно увидеть очередь
-пакетов, которые проверяются перед добавленим в Debian архив.
+пакетов, которые проверяются перед добавленим в Debian архив. Более актуальная
+ссылка: https://dfsg-new-queue.debian.org/
 
 
 --- Что такое Copyright
@@ -742,11 +743,11 @@ ${binary:Version}
 Желательно, чтобы `debian/copyright` соответствовал лицензии проекта:
 
 Files: *
-Copyright: 2016-2025 Karl Yngve Lervåg <karl.yngve@gmail.com>
+Copyright: 2016-2025 Upstream Author <upstream@gmail.com>
 License: Expat
 
 Files: debian/*
-Copyright: 2025 Kirill Rekhov <krekhov.dev@gmail.com>
+Copyright: 2025 Ivan Ivanov <example@gmail.com>
 License: Expat
 
 Коммит релиза (`debian/changelog` изменения) должен быть отдельным и
@@ -1101,3 +1102,18 @@ $ debsign package_1.0.0-1_source.changes
 $ dput mentors package_1.0.0-1_source.changes
 
 Это исправит проблему.
+
+
+--- DFSG (Debian Free Software Guidelines)
+https://dfsg-new-queue.debian.org/
+
+Это страница команды Debian, которая проверяет новые пакеты перед добавлением в
+репозиторий. Они смотрят, соответствуют ли пакеты правилам свободного ПО,
+лицензиям и политике Debian. После проверки пакет либо принимают, либо
+отправляют на доработку.
+
+DFSG - Debian Free Software Guidelines (Руководство Debian по свободному
+программному обеспечению).
+
+Это набор критериев, определяющих, можно ли считать ПО свободным и включать его
+в Debian.

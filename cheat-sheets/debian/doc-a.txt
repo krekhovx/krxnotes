@@ -1135,7 +1135,7 @@ lintian-brush - это утилита, которая автоматически
 - lintian - для проверки, lintian-brush - для автоматического исправления части проблем.
 
 
---- debian-policy ( Standards-Version )
+--- debian-policy (Standards-Version)
 Как узнать актуальную версию Standards-Version? Можно выполнить:
 $ apt-cache madison debian-policy
 
