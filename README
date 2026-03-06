@@ -49,6 +49,7 @@
 │       ├── vifm.txt
 │       ├── vim.txt
 │       └── xfce.txt
+├── clean-check.sh
 ├── craft-notes.txt
 ├── games
 │   ├── diablo2
@@ -244,4 +245,4 @@
 ├── README.md
 └── TODO
 
-45 directories, 200 files
+45 directories, 201 files

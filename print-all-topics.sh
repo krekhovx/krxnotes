@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Show all topics from all *.txt files
+# Show all topics from all *.txt files.
 #
 
 find . -type f -name "*.txt" -not -empty | while IFS= read -r f; do
