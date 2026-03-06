@@ -14,7 +14,7 @@
 * strcpy() vs memcpy()
 * execve("path/to/file", NULL, NULL);
 * Комментарии 4, 2
-* Нужно ли присваивать NULL указателю после free?
+* Нужно ли присваивать NULL указателю после free
 * lstat(), fstat(), stat()
 * malloc for struct pointer
 * dereferencing pointer to incomplete type
@@ -383,7 +383,7 @@ progname можно будет словить Segfault или чего друг�
 2 user (to user)
 
 
---- Нужно ли присваивать NULL указателю после free?
+--- Нужно ли присваивать NULL указателю после free
 free(p);
 free(p);
 

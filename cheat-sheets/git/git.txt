@@ -17,7 +17,6 @@
 * Изменение коммита в режиме rebase
 * Тег и релиз
 * Как изменить автора последнего коммита
-* Работа в приватном репозитории
 * Когда master отстаёт от origin/master и есть локальные изменения
 * git push --force
 * git revert
@@ -41,6 +40,7 @@
 * Подписание тегов и коммитов
 * Перезалить готовый репозиторий
 * Добавить пустую папку
+* GitHub Pages
 
 
 --- Основы Git
@@ -78,7 +78,7 @@
 репозитория).
 
 Если нам нужно осуществить клонирование `git clone` в каталог который отличается:
-$ git clone git://github.com/schacon/grit.git dir_repo
+$ git clone git://github.com/example/repo.git dir_repo
 
 Два состояния версионного контроля:
 * отслеживаемые (в прошлом коммите есть слепки)
@@ -124,7 +124,7 @@ git push (сервер) (ветка)
 
 Если нужно посмотреть изменения определенного коммита
 можно брать по сокращенному SHA или полному
-$ git show 1c002dd4b536e7479fe34593e72e6c6c1819e53b
+$ git show <hash>
 
 .gitconfig конфигурационный файл находится в домашней директории
 $ ls -A ~/ | grep .gitconfig
@@ -187,7 +187,7 @@ $ git push -f
 
 --- Удаление последних 3-4 коммитов
 Указываем коммит до которого хотим удалить:
-$ git reset --hard 57fcc4acfc154c59985eb2147d2653804a64eb9f
+$ git reset --hard <hash>
 $ git push --force
 
 
@@ -214,7 +214,7 @@ $ git diff --cached
 необходимые файлы репозитория.
 
 $ git init
-$ git remote add origin https://github.com/name/repo.git
+$ git remote add origin https://github.com/example/repo.git
 $ git push -u origin master
 
 
@@ -296,8 +296,8 @@ $ git push origin --delete <oldname>
 
 
 --- Изменение коммита в режиме rebase
-$ git rebase --interactive 0fb46e900908fc508c0037813be46636e26f9995
-$ git rebase -i 0fb46e900908fc508c0037813be46636e26f9995
+$ git rebase --interactive <hash>
+$ git rebase -i <hash>
 
 r reword      переименовать коммит
 e edit        изменить коммит
@@ -341,16 +341,7 @@ git tag -s upstream/2024.01.24
 
 
 --- Как изменить автора последнего коммита
-$ git commit --amend --author="John Doe <john@doe.org>"
-
-
---- Работа в приватном репозитории
-Для того чтобы делать push/pull в приватный репозиторий без запросов
-логина/пароля, нужно клонировать репозиторий по SSH, а не по HTTPS, через
-веб-морду `git clone ssh`, или же изменить в репозитории данной командой на ssh:
-`git remote set-url origin git@github.com:user/repo.gi`. Затем создать ключ
-командой: `ssh-keygen -t ed25519 -C "your_email@example.com"`. Скопировать
-содержимое .pub ключа и добавить его через веб-морду.
+$ git commit --amend --author="Ivan Ivanov <example@gmail.com>"
 
 
 --- Когда master отстаёт от origin/master и есть локальные изменения
@@ -378,7 +369,7 @@ $ git commit -m "merged and resolved the conflicts in files"
 
 --- git revert
 Отмена публичного коммита:
-$ git revert a72ef02 --no-commit
+$ git revert <hash> --no-commit
 $ git status
 И затем можно изменять существующий коммит, а после сделать `git push`
 (без --force) и создастся новый коммит (а редактируемый коммит останется в
@@ -386,8 +377,11 @@ $ git status
 
 
 --- git cherry-pick
+Это команда, которая берет конкретный коммит из одной ветки и переносит его в
+текущую ветку, не сливая всю ветку целиком.
+
 $ git checkout <branch>
-$ git cherry-pick 96e058414f8bd24cb9d6841a6a833342c92b5bf8
+$ git cherry-pick <hash>
 $ git push
 
 
@@ -443,7 +437,7 @@ $ git clone git@server-ip:path-to-project/
 --- Клонирование ядра
 Linux ядро клонируется очень долго, можно этого избежать и клонировать только
 последние коммиты:
-$ git clone --depth 1 --branch master git@github.com:krekhovx/linux.git
+$ git clone --depth 1 --branch master git@github.com:example/linux.git
 
 
 --- Права доступа файлов
@@ -672,3 +666,20 @@ $ git add dir/
 $ git commit -m "add empty 'dir' folder"
 
 Так git будет сохранять эту папку через наличие файла.
+
+
+--- GitHub Pages
+Это встроенный в GitHub хостинг статических сайтов, который автоматически
+публикует HTML, CSS и JavaScript прямо из репозитория. Он удобен для личных
+страниц, документации и простых проектов, не требует отдельного сервера и
+обновляется при каждом пуше.
+
+Custom Domain позволяет привязать к сайту на GitHub Pages своё собственное
+доменное имя. Для этого нужно прописать нужные DNS-записи у своего регистратора
+(обычно A или CNAME, указывающие на GitHub), затем указать домен в настройках
+Pages. GitHub автоматически выдаёт бесплатный HTTPS через Let's Encrypt.
+
+Чтобы использовать GitHub Pages для персонального сайта, нужно создать
+репозиторий с именем user.github.io, где вместо user используется твой логин
+GitHub. Всё, что лежит в этом репозитории, автоматически становится доступным по
+адресу https://user.github.io
