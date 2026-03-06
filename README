@@ -33,7 +33,6 @@
 │   ├── git
 │   │   ├── git-commit-templates.txt
 │   │   └── git.txt
-│   ├── make.txt
 │   ├── net.txt
 │   ├── regexp.txt
 │   └── tools
@@ -78,6 +77,7 @@
 │   │   │   ├── leftsh.c
 │   │   │   ├── operations.c
 │   │   │   └── tasks.c
+│   │   ├── build.txt
 │   │   ├── data-struct
 │   │   │   ├── array
 │   │   │   │   ├── array.c
