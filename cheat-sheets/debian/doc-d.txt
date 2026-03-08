@@ -1163,8 +1163,8 @@ Build-Depends: debhelper-compat (= 13),
   libwayland-dev,
   wayland-protocols
 Homepage: https://github.com/Slackadays/Clipboard/wiki
-Vcs-Git: https://salsa.debian.org/krekhov/Clipboard.git
-Vcs-Browser: https://salsa.debian.org/krekhov/Clipboard
+Vcs-Git: https://salsa.debian.org/Clipboard.git
+Vcs-Browser: https://salsa.debian.org/Clipboard
 Standards-Version: 4.7.2
 Rules-Requires-Root: no
 
