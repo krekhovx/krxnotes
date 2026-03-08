@@ -29,6 +29,7 @@
 * Broadcast
 * Multicast
 * Gateway
+* Netmask
 * RFC (Request for comments)
 * NTP (Network Time Protocol)
 * DNS (resolv)
@@ -350,7 +351,7 @@ IP - протокол, который отвечает за адресацию: 
 собой, чтобы можно было отправлять данные от одного к другому.
 
 
---- ARP (Addres Resolution Protocol)
+--- ARP (Address Resolution Protocol)
 Протокол в компьютерных сетях, предназначенный для определения MAC-адреса
 другого компьютера по известному IP-адресу. Задает вопрос, если это ваш IP,
 подскажите ваш MAC-адрес. Без этого протокола не будет связи между IP и MAC, что
