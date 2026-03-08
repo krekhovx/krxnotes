@@ -50,10 +50,6 @@
 │       └── xfce.txt
 ├── clean-check.sh
 ├── craft-notes.txt
-├── games
-│   ├── diablo2
-│   │   └── doc.txt
-│   └── README
 ├── languages
 │   ├── bash
 │   │   ├── doc.txt
@@ -245,4 +241,4 @@
 ├── README.md
 └── TODO
 
-45 directories, 201 files
+43 directories, 199 files
