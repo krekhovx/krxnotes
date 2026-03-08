@@ -269,6 +269,7 @@ $ echo l > /proc/sysrq-trigger
 --- sysrq + debug
 SrsRq - сочетания клавиш, соответствуют клавишам ALT + PRINTSCREEN + (что-то).
 Предназначены они главным образом для отладочных целей, начинаются с CONFIG_MAGIC_SYSRQ_*
+
 Включение:
 $ echo 1 > /proc/sys/kernel/sysrq  # enable
 $ echo 0 > /proc/sys/kernel/sysrq  # disable
