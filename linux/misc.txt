@@ -1233,8 +1233,8 @@ maxretry = 5
 bantime = 600
 logpath = /var/log/auth.log
 
-bantime — на сколько секунд банить
-maxretry — сколько попыток можно сделать
+bantime - на сколько секунд банить
+maxretry - сколько попыток можно сделать
 
 Применить настройки:
 $ systemctl restart fail2ban
