@@ -49,6 +49,7 @@
 * AppImage
 * Фаззинг
 * Что такое ИИ агенты
+* fail2ban
 
 
 --- Учетные записи
@@ -1198,3 +1199,59 @@ LangChain Agents, и десятки кастомных фреймворков. �
 локально, натравливать на свои проекты и подключать к CI.
 
 В целом это просто новая ступень автоматизации, а не "конец профессии".
+
+
+--- fail2ban
+Это маленькая утилита-охранник, которая защищает сервер от перебора паролей и
+подозрительной активности. Она следит за логами (например, sshd) и, если видит
+слишком много неудачных попыток входа, временно блокирует IP через Firewall.
+
+Зачем нужен для SSH:
+- защищает от brute-force
+- снижает нагрузку от ботов
+- не требует сложной настройки
+- автоматически банит подозрительные IP
+
+Установка:
+$ apt-get install fail2ban
+
+Запуск и автозагрузка:
+$ systemctl enable fail2ban
+$ systemctl start fail2ban
+
+-> Базовая настройка
+
+Вместо изменения `/etc/fail2ban/jail.conf` создаётся локальный файл:
+$ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+
+Минимальная настройка для SSH в `/etc/fail2ban/jail.local`:
+[sshd]
+enabled = true
+filter = sshd
+port = ssh
+maxretry = 5
+bantime = 600
+logpath = /var/log/auth.log
+
+bantime — на сколько секунд банить
+maxretry — сколько попыток можно сделать
+
+Применить настройки:
+$ systemctl restart fail2ban
+
+-> Проверки
+
+Статус сервиса:
+$ fail2ban-client status
+
+Статус конкретной тюрьмы (ssh):
+$ fail2ban-client status sshd
+
+Разбанить IP:
+$ fail2ban-client set sshd unbanip 1.2.3.4
+
+Где полезен кроме SSH:
+- защита nginx
+- защита nextcloud
+- защита vsftpd и postfix
+- фильтрация подозрительных паттернов в логах

@@ -692,7 +692,7 @@ $ kill -s SIGALRM $(pidof a.out)
 Можно использовать `crontab` и прописать:
 @reboot  /path/to/script.sh
 
-А можно использовать `/etc/xdg/autostart/example.desktop`.
+Можно использовать `/etc/xdg/autostart/example.desktop`.
 Будет выполнен после входа в графическое окружение:
 [Desktop Entry]
 Type=Application
@@ -702,7 +702,7 @@ StartupNotify=false
 Name=
 Comment=
 
-А можно использовать `/etc/rc.local` сценарий, написать сценарий:
+Можно использовать `/etc/rc.local` сценарий, написать сценарий:
 $ chmod +x /etc/rc.local
 $ systemctl enable rc-local
 $ systemctl start rc-local
