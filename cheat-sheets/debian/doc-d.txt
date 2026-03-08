@@ -5,7 +5,7 @@
 * Debian философия
 * Debian Desktop
 * Debian Mailing List
-* Package sponsor (debian)
+* Package sponsor (Debian)
 * Co-maintenance
 * Какие роли есть в Debian
 * Как получить роль DM
@@ -297,7 +297,7 @@ Debian.
 https://www.debian.org/MailingLists/subscribe
 
 
---- Package sponsor (debian)
+--- Package sponsor (Debian)
 Например, в сообществе Debian, это человек, который имеет право загружать пакеты
 в официальный репозиторий Debian. Он обычно отвечает за проверку пакетов, их
 соответствие стандартам Debian и их безопасность. Если разработчик пакетов хочет
