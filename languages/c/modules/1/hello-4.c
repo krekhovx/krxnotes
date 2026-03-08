@@ -17,7 +17,7 @@ module_init(hello_4_a);
 module_exit(hello_4_b);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Kirill Rekhov");
+MODULE_AUTHOR("Ivan Ivanov");
 MODULE_DESCRIPTION("A sample driver");
 
 /* Данный модуль поддерживает /dev/testdevice

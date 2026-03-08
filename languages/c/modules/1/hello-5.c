@@ -58,5 +58,5 @@ $ insmod <module> -> error (несовпадение vermagic)
 */
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Kirill Rekhov");
+MODULE_AUTHOR("Ivan Ivanov");
 MODULE_DESCRIPTION("A sample driver");
