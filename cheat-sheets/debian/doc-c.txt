@@ -8,6 +8,7 @@
 * Как создать ключ и подписать пакет
 * Разбор команды `gpg --list-keys`
 * Как выложить пакет на mentors.debian.org (dput)
+* Выдача прав DM
 * apt-rdepends
 * Транзитивные зависимости
 * pristine-tar
@@ -309,6 +310,20 @@ $ dput mentors <file>.changes
 Чтобы выложить новую версию пакета, нужно выполнить:
 $ dch
 и поднять версию, затем повторить те же действия.
+
+
+--- Выдача прав DM
+$ apt-get install dput-ng
+$ man /usr/bin/dcut
+$ # Search for 'dm' in the manual and use it.
+
+Узнать свой fingerprint:
+$ gpg --list-secret-keys --keyid-format LONG
+
+Выдать права мейнтейнеру:
+$ dcut ftp-master dm --uid <fingerprint> --allow <package>
+
+После этого мейнтейнер сможет загружать пакет без помощи DD.
 
 
 --- apt-rdepends
