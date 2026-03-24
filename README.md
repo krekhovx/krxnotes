@@ -3,6 +3,7 @@
     <img src="https://img.shields.io/badge/Knowledge%20Base--RUS-blue?style=flat&label=%D0%91%D0%B0%D0%B7%D0%B0%20%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9&labelColor=008000">
 </a>
 <img src="https://img.shields.io/github/repo-size/krekhovx/krxnotes.svg?label=Repo%20size&style=flat">
+[![Hypercommit](https://img.shields.io/badge/Hypercommit-DB2475)](https://hypercommit.com/krxnotes)
 </div>
 
 # Notes
