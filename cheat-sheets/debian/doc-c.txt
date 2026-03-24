@@ -325,6 +325,8 @@ $ dcut ftp-master dm --uid <fingerprint> --allow <package>
 
 После этого мейнтейнер сможет загружать пакет без помощи DD.
 
+Granting Permissions: https://wiki.debian.org/DebianMaintainer
+
 
 --- apt-rdepends
 Работа с Depends пакета.
