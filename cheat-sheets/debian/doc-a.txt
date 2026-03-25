@@ -263,6 +263,8 @@ $ uscan --no-download
 $ uscan --download
 $ uscan --verbose
 $ uscan
+$ man uscan # узнать актуальную версию `debian/watch` файла
+            # смотреть раздел HISTORY AND UPGRADING
 
 `uscan` определяет local version не из `debian/changelog`, а из файла
 `debian/watch`. Конкретнее - `uscan` парсит номер версии архива в текущем
