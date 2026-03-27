@@ -327,6 +327,10 @@ $ dcut ftp-master dm --uid <fingerprint> --allow <package>
 
 Granting Permissions: https://wiki.debian.org/DebianMaintainer
 
+Есть ли у прав какой-то срок?
+Обычно это бессрочно: права DM на пакет действуют, пока DD их явно не отзовёт.
+Автоматического срока действия обычно нет.
+
 
 --- apt-rdepends
 Работа с Depends пакета.
