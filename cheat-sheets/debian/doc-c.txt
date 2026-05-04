@@ -325,7 +325,7 @@ $ dcut ftp-master dm --uid <fingerprint> --allow <package>
 
 После этого мейнтейнер сможет загружать пакет без помощи DD.
 
-Granting Permissions: https://wiki.debian.org/DebianMaintainer
+https://wiki.debian.org/DebianMaintainer#Granting_Permissions
 
 Есть ли у прав какой-то срок?
 Обычно это бессрочно: права DM на пакет действуют, пока DD их явно не отзовёт.
