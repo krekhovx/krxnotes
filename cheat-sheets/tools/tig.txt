@@ -1,5 +1,6 @@
 Находясь на нужной ветке:
 $ tig
+$ tig log
 
 l - verbose view on current branch
 m - main view
