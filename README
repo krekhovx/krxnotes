@@ -1,4 +1,6 @@
 .
+├── ai
+│   └── doc.txt
 ├── books
 │   ├── Bash и кибербезопасность.pdf
 │   ├── Внутреннее устройство Linux.pdf
@@ -243,4 +245,4 @@
 ├── README.md
 └── TODO
 
-43 directories, 201 files
+44 directories, 202 files

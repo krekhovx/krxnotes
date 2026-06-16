@@ -47,6 +47,11 @@ cheat-sheets/
 books/
 ```
 
+Искусственный интеллект:
+```
+ai/
+```
+
 Смотреть дерево файлов: [README](https://github.com/krekhovx/krxnotes/blob/master/README).
 
 ## Оглавление
